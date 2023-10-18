@@ -19,23 +19,55 @@ class PersonalInfoTablet extends ConsumerWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          tr(LocaleKeys.name),
-          style: Theme.of(context).textTheme.displayLarge,
+        SizedBox(
+          height: 270,
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(16.0),
+                  child: Image.asset(
+                    'assets/images/pdp.jpg',
+                    height: 200.0,
+                    width: 200.0,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Text(
+                      tr(LocaleKeys.name),
+                      style: Theme.of(context).textTheme.displayLarge,
+                    ),
+                    Text(
+                      tr(LocaleKeys.description),
+                      style: Theme.of(context).textTheme.titleLarge,
+                    ),
+                    gapH24,
+                    Text(
+                      tr(LocaleKeys.subDescription),
+                      style: Theme.of(context).textTheme.bodyLarge,
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
-        gapH4,
-        Text(
-          tr(LocaleKeys.description),
-          style: Theme.of(context).textTheme.titleLarge,
+        Row(
+          children: [
+            _buildResumeButton(ref, resumes: resumes.toList()),
+            gapW12,
+            ContactBar(contacts: contacts.toList()),
+          ],
         ),
-        gapH8,
-        Text(
-          tr(LocaleKeys.subDescription),
-          style: Theme.of(context).textTheme.bodyLarge,
-        ),
-        _buildResumeButton(ref, resumes: resumes.toList()),
-        gapH8,
-        ContactBar(contacts: contacts.toList()),
       ],
     );
   }

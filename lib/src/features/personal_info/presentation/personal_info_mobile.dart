@@ -19,23 +19,54 @@ class PersonalInfoMobile extends ConsumerWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          tr(LocaleKeys.name),
-          style: Theme.of(context).textTheme.displayMedium,
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 8.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(16.0),
+                child: Image.asset(
+                  'assets/images/pdp.jpg',
+                  height: 120.0,
+                  width: 120.0,
+                ),
+              ),
+            ),
+            gapW32,
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    tr(LocaleKeys.name),
+                    style: Theme.of(context).textTheme.displayMedium,
+                  ),
+                  gapH4,
+                  Text(
+                    tr(LocaleKeys.description),
+                    style: Theme.of(context)
+                        .textTheme
+                        .titleLarge
+                        ?.copyWith(fontSize: 20),
+                  ),
+                  gapH8,
+                  Text(
+                    tr(LocaleKeys.subDescription),
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
-        gapH4,
-        Text(
-          tr(LocaleKeys.description),
-          style: Theme.of(context).textTheme.titleLarge?.copyWith(fontSize: 20),
+        Row(
+          children: [
+            _buildResumeButton(ref, resumes: resumes.toList()),
+            gapW8,
+            Expanded(child: ContactBar(contacts: contacts.toList())),
+          ],
         ),
-        gapH8,
-        Text(
-          tr(LocaleKeys.subDescription),
-          style: Theme.of(context).textTheme.bodyLarge,
-        ),
-        _buildResumeButton(ref, resumes: resumes.toList()),
-        gapH8,
-        ContactBar(contacts: contacts.toList()),
       ],
     );
   }

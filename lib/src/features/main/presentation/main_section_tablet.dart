@@ -53,7 +53,7 @@ class _MainTabletState extends ConsumerState<MainTablet> {
                                     key: ref.watch(homeSectionKeyProvider),
                                   ),
                                 ),
-                                gapH100,
+                                gapH24,
                                 Padding(
                                   padding: const EdgeInsets.symmetric(
                                     horizontal: 12,
@@ -62,11 +62,11 @@ class _MainTabletState extends ConsumerState<MainTablet> {
                                     key: ref.watch(aboutSectionKeyProvider),
                                   ),
                                 ),
-                                gapH100,
+                                gapH24,
                                 ExperienceSection(
                                   key: ref.watch(experienceSectionKeyProvider),
                                 ),
-                                gapH100,
+                                gapH24,
                                 ProjectSection(
                                   key: ref.watch(projectSectionKeyProvider),
                                 ),

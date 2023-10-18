@@ -1,32 +1,25 @@
 {
-    "name": "Aladdine Abdou",
-    "description": "Mobile App Developer",
-    "subDescription": "Flutter & Android Enthusiast",
+    "name": "Thomas D'hulst",
+    "description": "Mobile App & Full Stack Developer",
+    "subDescription": "Flutter lover and forever eager to learn ",
     "contacts": [
         {
             "tooltip": "LinkedIn",
-            "url": "https://www.linkedin.com/in/aladdine-abdou/",
+            "url": "https://www.linkedin.com/in/thomas-d-hulst/",
             "iconCodePoint": "0xf08c",
             "iconFontFamily": "FontAwesomeBrands",
             "iconFontPackage": "font_awesome_flutter"
         },
         {
-            "tooltip": "Github",
-            "url": "https://github.com/Aaldn",
-            "iconCodePoint": "0xf09b",
-            "iconFontFamily": "FontAwesomeBrands",
-            "iconFontPackage": "font_awesome_flutter"
-        },
-        {
-            "tooltip": "aladdine.abdou@gmail.com",
-            "url": "mailto:aladdine.abdou@gmail.com",
+            "tooltip": "thomas.dhulst@hotmail.fr",
+            "url": "mailto:thomas.dhulst@hotmail.fr",
             "iconCodePoint": "0xf0e0",
             "iconFontFamily": "FontAwesomeSolid",
             "iconFontPackage": "font_awesome_flutter"
         },
         {
-            "tooltip": "+33 7 82 54 34 70",
-            "url": "tel:+33782543470",
+            "tooltip": "+33 6 37 43 63 97",
+            "url": "tel:+33637436397",
             "iconCodePoint": "0xf095",
             "iconFontFamily": "FontAwesomeSolid",
             "iconFontPackage": "font_awesome_flutter"
@@ -35,174 +28,127 @@
     "resumes": [
         {
             "languageCode": "en",
-            "url": "https://drive.google.com/file/d/1pVg6EjpZvixMcOkgRMGrhrkmAeIaSn3t/view?usp=sharing"
+            "url": "https://drive.google.com/file/d/1GX6RxtWIHq42zLv2gAWXK-s3nHlyUkZs/view?usp=sharing"
         },
         {
             "languageCode": "fr",
-            "url": "https://drive.google.com/file/d/13t62MynE9GavlyrtHNM1ShdkdJT0bc0B/view?usp=sharing"
+            "url": "https://drive.google.com/file/d/1GX6RxtWIHq42zLv2gAWXK-s3nHlyUkZs/view?usp=sharing"
         }
     ],
-    "aboutDescription": "Hello! I'm Aladdine, an apprentice developer and fourth-year student at ESGI Paris, specializing in mobile and IoT development. Passionate about the mobile ecosystem, I combine my studies with my practical expericence to build intuitive and feature-rich applications.\nI aspire to put my skills to work on inspiring and challenging projects.",
+    "aboutDescription": "As a passionate budding developer, I'm always on the lookout for the latest trends in mobile applications. My aim is to create innovative applications that improve users' lives using emerging technologies.\n\nI'm a problem solver, creative thinker and passionate collaborator, ready to take on any challenge to create sophisticated interfaces, improve performance and maximise the user experience.\n\nJoin me on this exciting journey where innovation knows no bounds and mobile applications are the way to create so many possibilities!",
     "experiences": [
         {
-            "job": "Mobile App Developer",
-            "company": "Walt Disney Imagineering",
-            "description": "Development of an offline-first mobile snagging application for Disneyland Paris, streamlining information gathering for technical experts in the field and enhancing communication with maintenance services for problem-solving.",
+            "job": "Full Stack Developer, Flutter Referent",
+            "company": "MOFFI",
+            "description": "Flutter, Angular and Spring Boot technical stack for the creation and development of a robust web application and its API. Use of agile development methods. Technical reference, guaranteeing innovative, high-performance solutions in the development of mobile applications.",
             "isPresent": false,
-            "startYear": 2022,
+            "startYear": 2021,
+            "startMonth": 9,
             "endYear": 2023,
+            "endMonth": 9,
             "technologies": [
                 "Flutter",
                 "Dart",
-                "Django",
-                "Python",
+                "AngularJS",
+                "Java",
+                "Sprint Boot",
                 "PostgreSQL",
-                "SQLite",
                 "Docker"
             ],
             "links": [
                 {
-                    "url": "https://sites.disney.com/waltdisneyimagineering/",
-                    "display": "Walt Disney Imagineering"
+                    "url": "https://www.moffi.io/",
+                    "display": "MOFFI"
                 }
             ]
         },
         {
-            "job": "Mobile App Developer",
-            "company": "Solutions Multi Techniques",
-            "description": "Development of a Progressive Web App for security system technicians, enabling them to generate comprehensive PDF quotes. This allows for the immediate delivery of quotes to clients after their visit, thereby increasing the conversion rate.",
-            "startYear": 2022,
+            "job": "Private teacher",
+            "company": "Superprof.com",
+            "description": "Refresher courses in maths for secondary school pupils, with personalised support.",
+            "startYear": 2017,
             "startMonth": 1,
-            "endYear": 2022,
+            "endYear": 2018,
             "endMonth": 2,
-            "technologies": [
-                "Flutter",
-                "Dart",
-                "Firebase"
-            ]
-        },
-        {
-            "job": "Web Developer",
-            "company": "Association FAIRE",
-            "description": "Development of the association's website, in collaboration with a group of developers. It provides visitors with the opportunity to learn more about the association and become members.\nTo date, the website has attracted over 10,000 visits.",
-            "startYear": 2021,
-            "startMonth": 5,
-            "endYear": 2021,
-            "endMonth": 6,
-            "technologies": [
-                "HTML",
-                "CSS",
-                "Javascript",
-                "PHP",
-                "MariaDB",
-                "Apache"
-            ],
-            "links": [
-                {
-                    "url": "https://www.association-faire.fr",
-                    "display": "Association FAIRE"
-                }
-            ]
+            "technologies": []
         }
     ],
     "present": "Present",
     "projects": [
         {
-            "name": "Portfolio",
-            "description": "Yes, it's this portfolio! \nThis project follows a Riverpod-based Architecture, using a feature-first approach for its structure. It is fully responsive, and supports multiple themes and languages.",
-            "url": "https://github.com/Aaldn/portfolio#readme",
+            "name": "Control2Rack",
+            "description": "Creation of a customised mobile application, implementation of a BLoC architecture and daily monitoring",
+            "url": "https://control2rack.fr/",
             "iconCodePoint": "0xf09b",
             "iconFontFamily": "FontAwesomeBrands",
             "iconFontPackage": "font_awesome_flutter",
-            "screenshotPath": "assets/images/portfolio.png",
+            "screenshotPath": "assets/images/rack.jpg",
             "technologies": [
                 "Flutter",
                 "Dart",
+                "SQL",
                 "Firebase"
-            ],
-            "links": [
-                {
-                    "url": "https://aladdine.dev",
-                    "display": "Inspired by Aladdine Abdou"
-                },
-                {
-                    "url": "https://brittanychiang.com",
-                    "display": "Inspired by Brittany Chiang"
-                }
             ]
         },
         {
-            "name": "Learn Flow API",
-            "description": "Learn Flow is a collaborative project focused on creating a solution that connects students and teachers. This REST API serves as an interface for the project's various clients, including Android, iOS, and Web. It notably offers authentication capabilities (JWT).",
-            "url": "https://github.com/Aaldn/learnflow-api#readme",
+            "name": "Challeng'Us",
+            "description": "Creation of a challenge exchange application to make up for the lack of motivation during confinement. Research into requirements and target audience, creation of mock-ups and MVP. API documentation, Firebase social network management",
+            "url": "",
             "iconCodePoint": "0xf09b",
             "iconFontFamily": "FontAwesomeBrands",
             "iconFontPackage": "font_awesome_flutter",
-            "screenshotPath": "assets/images/learnflow-api.png",
-            "technologies": [
-                "Node.js",
-                "Express",
-                "TypeScript",
-                "MongoDB",
-                "Docker"
-            ]
-        },
-        {
-            "name": "Learn Flow Backoffice",
-            "description": "This is the back-office build for managers in the Learn Flow project. This Single-Page App enables them to monitor activity such as user traffic and invoices associated with their applications and users.",
-            "url": "https://github.com/Aaldn/learnflow_backoffice#readme",
-            "iconCodePoint": "0xf09b",
-            "iconFontFamily": "FontAwesomeBrands",
-            "iconFontPackage": "font_awesome_flutter",
-            "screenshotPath": "assets/images/learnflow-backoffice.png",
+            "screenshotPath": "assets/images/challengus.png",
             "technologies": [
                 "Flutter",
-                "Dart"
-            ]
-        },
-        {
-            "name": "GSB-Frais",
-            "description": "The GSB-Frais project is a web-based expense management application developed for medical representatives and accountants at the fictional company GSB. It facilitates the entry and review of monthly reports by medical representatives, while enabling accountants to process them.",
-            "url": "https://github.com/Aaldn/GSB-Frais#readme",
-            "iconCodePoint": "0xf09b",
-            "iconFontFamily": "FontAwesomeBrands",
-            "iconFontPackage": "font_awesome_flutter",
-            "screenshotPath": "assets/images/gsb-frais.png",
-            "technologies": [
-                "Symfony",
-                "PHP",
-                "Bootstrap",
-                "MariaDB",
-                "Apache"
-            ]
-        },
-        {
-            "name": "GSB-RV-Visiteur-Serveur",
-            "description": "The GSB project's REST API serves as an interface for various project clients, including Android, Desktop, and Web applications.",
-            "url": "https://github.com/Aaldn/GSB-RV-Visiteur-Serveur#readme",
-            "iconCodePoint": "0xf09b",
-            "iconFontFamily": "FontAwesomeBrands",
-            "iconFontPackage": "font_awesome_flutter",
-            "screenshotPath": "assets/images/gsb-rv-visiteur-serveur.png",
-            "technologies": [
-                "Flask",
-                "Python",
-                "MariaDB",
-                "Docker"
-            ]
-        },
-        {
-            "name": "GSB-RV-DR",
-            "description": "The GSB-RV-DR project is a desktop application designed for regional delegates at the fictional company GSB. It tracks visit reports and enables monitoring of medical representatives activities. Regional delegates can access a lists of reports for specific representatives and apply sorts and filters to it.",
-            "url": "https://github.com/Aaldn/GSB-RV-DR#readme",
-            "iconCodePoint": "0xf09b",
-            "iconFontFamily": "FontAwesomeBrands",
-            "iconFontPackage": "font_awesome_flutter",
-            "screenshotPath": "assets/images/gsb-rv-dr.png",
-            "technologies": [
-                "JavaFX",
+                "Dart",
+                "SQL",
+                "Firebase",
+                "Figma",
                 "Java",
-                "MariaDB"
+                "Spring Boot"
+            ]
+        },
+        {
+            "name": "Labyrinthe en folie",
+            "description": "Creation of a python application for mazes and nonograms: resolution, compliance with specifications, image generation",
+            "url": "",
+            "iconCodePoint": "0xf09b",
+            "iconFontFamily": "FontAwesomeBrands",
+            "iconFontPackage": "font_awesome_flutter",
+            "screenshotPath": "assets/images/nonogram.png",
+            "technologies": [
+                "Python"
+            ]
+        },
+        {
+            "name": "Carto'carbu",
+            "description": "Creation of a website to geolocate service stations, with various information sheets on these stations, with the possibility of creating accounts and commenting.",
+            "url": "",
+            "iconCodePoint": "0xf09b",
+            "iconFontFamily": "FontAwesomeBrands",
+            "iconFontPackage": "font_awesome_flutter",
+            "screenshotPath": "assets/images/carbu.png",
+            "technologies": [
+                "HTLM",
+                "CSS",
+                "PHP",
+                "SQL",
+                "JavaScript",
+                "JSON"
+            ]
+        },
+        {
+            "name": "Questionnaire",
+            "description": "Creation of an interactive questionnaire, which can be created from a text file, with a terminal or graphic display. Implementation of heritability tests and design patterns validating the various SOLID principles.",
+            "url": "",
+            "iconCodePoint": "0xf09b",
+            "iconFontFamily": "FontAwesomeBrands",
+            "iconFontPackage": "font_awesome_flutter",
+            "screenshotPath": "assets/images/junit.png",
+            "technologies": [
+                "Java",
+                "Swing",
+                "JUnit"
             ]
         }
     ],

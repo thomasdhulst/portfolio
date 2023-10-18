@@ -35,6 +35,17 @@ class PersonalInfoDesktop extends ConsumerWidget {
         ),
         _buildResumeButton(ref, resumes: resumes.toList()),
         const Spacer(),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 8.0),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(16.0),
+            child: Image.asset(
+              'assets/images/pdp.jpg',
+              height: 200.0,
+              width: 200.0,
+            ),
+          ),
+        ),
         gapH8,
         ContactBar(contacts: contacts.toList()),
       ],

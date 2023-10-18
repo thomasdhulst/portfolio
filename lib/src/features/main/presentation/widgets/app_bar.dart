@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/src/common/data/language_repository.dart';
@@ -38,7 +39,13 @@ class MyAppBar extends ConsumerWidget {
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      const Icon(FontAwesomeIcons.terminal),
+                      // const Icon(FontAwesomeIcons.terminal),
+                      SvgPicture.asset(
+                        'assets/images/logo.svg',
+                        semanticsLabel: 'TD Logo',
+                        fit: BoxFit.contain,
+                        width: 54,
+                      ),
                       const SizedBox(width: 12),
                       Text(tr(LocaleKeys.portfolio)),
                     ],
