@@ -54,47 +54,10 @@ class EndDrawer extends ConsumerWidget {
                       ),
                       gapH80,
                       AnimatedFadeSlide(
-                        offset: const Offset(128, 0),
-                        duration: const Duration(milliseconds: 300),
-                        child: MyDrawerButton(
-                          title: tr(LocaleKeys.homeSectionTitle),
-                          sectionKey: ref.watch(homeSectionKeyProvider),
-                        ),
-                      ),
-                      gapH40,
-                      AnimatedFadeSlide(
-                        offset: const Offset(112, 0),
-                        duration: const Duration(milliseconds: 350),
-                        child: MyDrawerButton(
-                          title: tr(LocaleKeys.aboutSectionTitle),
-                          sectionKey: ref.watch(aboutSectionKeyProvider),
-                        ),
-                      ),
-                      gapH40,
-                      AnimatedFadeSlide(
-                        offset: const Offset(96, 0),
-                        duration: const Duration(milliseconds: 375),
-                        child: MyDrawerButton(
-                          title: tr(LocaleKeys.experienceSectionTitle),
-                          sectionKey: ref.watch(experienceSectionKeyProvider),
-                        ),
-                      ),
-                      gapH40,
-                      AnimatedFadeSlide(
-                        offset: const Offset(80, 0),
-                        duration: const Duration(milliseconds: 400),
-                        child: MyDrawerButton(
-                          title: tr(LocaleKeys.projectsSectionTitle),
-                          sectionKey: ref.watch(projectSectionKeyProvider),
-                        ),
-                      ),
-                      gapH80,
-                      AnimatedFadeSlide(
                         offset: const Offset(0, 64),
                         duration: const Duration(milliseconds: 350),
                         child: _buildLocaleButton(context, ref),
                       ),
-                      gapH40,
                     ],
                   ),
                 ],

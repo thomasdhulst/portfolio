@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:portfolio/src/features/experience/presentation/experience_desktop.dart';
 import 'package:portfolio/src/common/widgets/responsive.dart';
+import 'package:portfolio/src/features/experience/presentation/experience_mobile.dart';
 
 class ExperienceSection extends ConsumerWidget {
   const ExperienceSection({super.key});
@@ -10,6 +11,8 @@ class ExperienceSection extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return const Responsive(
       desktop: ExperienceDesktop(),
+      tablet: ExperienceMobile(),
+      mobile: ExperienceMobile(),
     );
   }
 }

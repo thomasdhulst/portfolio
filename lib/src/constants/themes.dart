@@ -75,7 +75,7 @@ final lightTheme = FlexThemeData.light(
   swapLegacyOnMaterial3: true,
   // To use the playground font, add GoogleFonts package and uncomment
   // fontFamily: GoogleFonts.notoSans().fontFamily,
-  fontFamily: GoogleFonts.nunito().fontFamily,
+  fontFamily: GoogleFonts.roboto().fontFamily,
 );
 
 final darkTheme = FlexThemeData.dark(
@@ -146,5 +146,5 @@ final darkTheme = FlexThemeData.dark(
   swapLegacyOnMaterial3: true,
   // To use the Playground font, add GoogleFonts package and uncomment
   // fontFamily: GoogleFonts.notoSans().fontFamily,
-  fontFamily: GoogleFonts.nunito().fontFamily,
+  fontFamily: GoogleFonts.roboto().fontFamily,
 );

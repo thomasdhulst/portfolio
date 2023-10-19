@@ -34,49 +34,49 @@ class _MainTabletState extends ConsumerState<MainTablet> {
                 controller: scrollController,
                 slivers: [
                   const MySliverAppBar(),
-                  SliverList.list(
-                    children: [
-                      Padding(
-                        padding: _buildResponsivePadding(),
-                        child: Align(
-                          alignment: Alignment.topLeft,
-                          child: AnimatedFadeSlide(
-                            offset: const Offset(-128, 0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                    horizontal: 12,
-                                  ),
-                                  child: PersonalInfoSection(
-                                    key: ref.watch(homeSectionKeyProvider),
-                                  ),
+                  SliverPadding(
+                    padding: _buildResponsivePadding(),
+                    sliver: SliverFillRemaining(
+                      hasScrollBody: true,
+                      child: Align(
+                        alignment: Alignment.topLeft,
+                        child: AnimatedFadeSlide(
+                          offset: const Offset(-128, 0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 12,
                                 ),
-                                gapH24,
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                    horizontal: 12,
-                                  ),
-                                  child: AboutSection(
-                                    key: ref.watch(aboutSectionKeyProvider),
-                                  ),
+                                child: PersonalInfoSection(
+                                  key: ref.watch(homeSectionKeyProvider),
                                 ),
-                                gapH24,
-                                ExperienceSection(
-                                  key: ref.watch(experienceSectionKeyProvider),
+                              ),
+                              gapH24,
+                              Expanded(
+                                // height: 1500,
+                                child: TabBarView(
+                                  children: [
+                                    AboutSection(
+                                      key: ref.watch(aboutSectionKeyProvider),
+                                    ),
+                                    ExperienceSection(
+                                      key: ref
+                                          .watch(experienceSectionKeyProvider),
+                                    ),
+                                    ProjectSection(
+                                      key: ref.watch(projectSectionKeyProvider),
+                                    ),
+                                  ],
                                 ),
-                                gapH24,
-                                ProjectSection(
-                                  key: ref.watch(projectSectionKeyProvider),
-                                ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
-                    ],
-                  )
+                    ),
+                  ),
                 ],
               ),
             ),

@@ -12,17 +12,17 @@ class DarkModeSwitch extends ConsumerWidget {
       children: [
         const Icon(Icons.wb_sunny_outlined),
         Switch(
-          value: _getDarkMode(ref),
+          value: _isDarkModeEnabled(ref),
           onChanged: (_) {
             ref.read(darkModeProvider.notifier).updateTheme();
           },
         ),
-        Icon(_getDarkMode(ref) ? Icons.mode_night : Icons.mode_night_outlined),
+        Icon(_isDarkModeEnabled(ref) ? Icons.mode_night : Icons.mode_night_outlined),
       ],
     );
   }
 
-  bool _getDarkMode(WidgetRef ref) {
+  bool _isDarkModeEnabled(WidgetRef ref) {
     return ref.watch(darkModeProvider).maybeWhen(
           data: (darkMode) => darkMode,
           orElse: () => ThemeMode.system == ThemeMode.dark,

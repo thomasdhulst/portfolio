@@ -21,8 +21,8 @@ class BottomBanner extends ConsumerWidget {
       child: DefaultTextStyle(
         style: Theme.of(context).textTheme.titleSmall!,
         child: MySelectionArea(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+          child: OverflowBar(
+            overflowAlignment: OverflowBarAlignment.center,
             children: [
               Text(
                 "${tr(LocaleKeys.bottomBanner_message)} ",

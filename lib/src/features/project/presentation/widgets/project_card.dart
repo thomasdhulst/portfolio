@@ -51,9 +51,9 @@ class _ProjectCardState extends ConsumerState<ProjectCard> {
 
   void _onTap() async {
     final url = widget.project.url;
-    if (url == null) return;
+    if (url?.isEmpty ?? true) return;
     try {
-      await LaunchUrlHelper.launchURL(url);
+      await LaunchUrlHelper.launchURL(url!);
     } catch (e) {
       if (context.mounted) {
         ScaffoldMessengerHelper.showLaunchUrlError(context, url: url);

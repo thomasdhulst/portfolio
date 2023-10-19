@@ -17,7 +17,7 @@ void main() async {
   // );
   setPathUrlStrategy();
   GoogleFonts.config.allowRuntimeFetching = false;
-  await GoogleFonts.pendingFonts([GoogleFonts.nunito()]);
+  await GoogleFonts.pendingFonts([GoogleFonts.roboto()]);
   runApp(
     ProviderScope(
       child: EasyLocalization(

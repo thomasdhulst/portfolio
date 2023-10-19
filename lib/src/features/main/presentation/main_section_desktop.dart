@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:portfolio/src/common/widgets/animated_fade_slide.dart';
 import 'package:portfolio/src/common/widgets/selection_area.dart';
+import 'package:portfolio/src/constants/sizes.dart';
 import 'package:portfolio/src/features/about/presentation/about_section.dart';
 import 'package:portfolio/src/features/experience/presentation/experience_section.dart';
 import 'package:portfolio/src/features/personal_info/presentation/personal_info_section.dart';
@@ -82,14 +83,15 @@ class MainDesktop extends ConsumerWidget {
                                         key: ref.watch(aboutSectionKeyProvider),
                                       ),
                                     ),
-                                    const SizedBox(height: 120),
+                                    gapH120,
                                     ExperienceSection(
-                                      key: ref
-                                          .watch(experienceSectionKeyProvider),
+                                      key: ref.watch(
+                                          experienceSectionKeyProvider),
                                     ),
-                                    const SizedBox(height: 120),
+                                    gapH120,
                                     ProjectSection(
-                                      key: ref.watch(projectSectionKeyProvider),
+                                      key: ref
+                                          .watch(projectSectionKeyProvider),
                                     ),
                                   ],
                                 ),

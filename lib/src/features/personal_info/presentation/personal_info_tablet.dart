@@ -36,6 +36,7 @@ class PersonalInfoTablet extends ConsumerWidget {
                   ),
                 ),
               ),
+              gapW32,
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
