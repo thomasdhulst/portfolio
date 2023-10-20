@@ -1,4 +1,3 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:portfolio/src/common/data/language_repository.dart';
@@ -6,12 +5,8 @@ import 'package:portfolio/src/common/widgets/animated_fade_slide.dart';
 import 'package:portfolio/src/common/widgets/selection_area.dart';
 import 'package:portfolio/src/constants/sizes.dart';
 import 'package:portfolio/src/features/main/presentation/widgets/dark_mode_switch.dart';
-import 'package:portfolio/src/features/main/presentation/widgets/drawer_button.dart';
 import 'package:portfolio/src/features/main/presentation/widgets/locale_button.dart';
-
-import 'package:portfolio/src/features/main/provider/section_key_provider.dart';
 import 'package:portfolio/src/common/widgets/responsive.dart';
-import 'package:portfolio/src/localization/generated/locale_keys.g.dart';
 
 class EndDrawer extends ConsumerWidget {
   const EndDrawer({super.key});

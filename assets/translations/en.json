@@ -152,6 +152,29 @@
             ]
         }
     ],
+    "educations": [
+        {
+            "title": "Master's degree in E-Services IT",
+            "school": "Université de Lille",
+            "description": "Ergonomics and graphic design, software engineering, project management, languages and frontend and backend infrastructure technologies for the Web or applications",
+            "startYear": 2020,
+            "endYear": 2022
+        },
+        {
+            "title": "Bachelor's degree in computer science",
+            "school": "Université de Lille",
+            "description": "Systems programming, automata definition, relational database complexity, object-oriented design",
+            "startYear": 2017,
+            "endYear": 2020
+        },
+        {
+            "title": "Scientific Baccalaureate",
+            "school": "Lycée Jehanne D'arc Tourcoing",
+            "description": "Mathematics, Physical Sciences, Chemistry, Computer Sciences Digital Sciences",
+            "startYear": 2014,
+            "endYear": 2014
+        }
+    ],
     "languages": [
         {
             "code": "en",
@@ -175,8 +198,10 @@
     "aboutSectionTitleAlt": "About Me",
     "experienceSectionTitle": "Experience",
     "projectsSectionTitle": "Projects",
+    "educationSectionTitle": "Education",
     "resume": "Resume",
     "downloadResume": "Download resume",
     "openUrlError": "Could not open the url",
+    "scrollToTop": "Scroll back to the top",
     "unknownLanguageError": "Language unknown"
 }

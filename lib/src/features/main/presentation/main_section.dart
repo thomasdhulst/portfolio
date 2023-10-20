@@ -1,13 +1,14 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:portfolio/src/constants/tab_bar.dart';
+import 'package:portfolio/src/constants/my_tabs.dart';
 import 'package:portfolio/src/features/main/presentation/main_section_desktop.dart';
 import 'package:portfolio/src/features/main/presentation/main_section_tablet.dart';
-import 'package:portfolio/src/features/main/presentation/widgets/bottom_banner.dart';
 import 'package:portfolio/src/features/main/presentation/widgets/end_drawer.dart';
 import 'package:portfolio/src/features/main/presentation/widgets/safe_area.dart';
 import 'package:portfolio/src/features/main/provider/scroll_controller.dart';
 import 'package:portfolio/src/common/widgets/responsive.dart';
+import 'package:portfolio/src/localization/generated/locale_keys.g.dart';
 
 class MainSection extends ConsumerStatefulWidget {
   const MainSection({super.key});
@@ -17,18 +18,7 @@ class MainSection extends ConsumerStatefulWidget {
 }
 
 class _MainSectionState extends ConsumerState<MainSection> {
-  double _bottomBannerHeight = 0;
   bool _showScrollToTopFAB = false;
-
-  void _displayBottomBanner() {
-    final scrollController = ref.watch(scrollControllerProvider);
-    final scrollPosition = scrollController.position;
-    if (scrollPosition.pixels >= scrollPosition.maxScrollExtent - 64) {
-      setState(() => _bottomBannerHeight = 48);
-    } else {
-      setState(() => _bottomBannerHeight = 0);
-    }
-  }
 
   void _displayScrollToTopFAB() {
     final scrollController = ref.watch(scrollControllerProvider);
@@ -43,7 +33,6 @@ class _MainSectionState extends ConsumerState<MainSection> {
 
   @override
   Widget build(BuildContext context) {
-    ref.watch(scrollControllerProvider).addListener(_displayBottomBanner);
     ref.watch(scrollControllerProvider).addListener(_displayScrollToTopFAB);
 
     return DefaultTabController(
@@ -57,8 +46,7 @@ class _MainSectionState extends ConsumerState<MainSection> {
                       duration: const Duration(milliseconds: 150),
                       curve: Curves.bounceIn,
                     ),
-                // TODO(ah): trad
-                tooltip: 'Go to up',
+                tooltip: tr(LocaleKeys.scrollToTop),
                 child: const Icon(Icons.keyboard_double_arrow_up),
               )
             : null,

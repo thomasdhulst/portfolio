@@ -5,6 +5,7 @@ import 'package:portfolio/src/common/widgets/animated_fade_slide.dart';
 import 'package:portfolio/src/common/widgets/selection_area.dart';
 import 'package:portfolio/src/constants/sizes.dart';
 import 'package:portfolio/src/features/about/presentation/about_section.dart';
+import 'package:portfolio/src/features/education/presentation/education_section.dart';
 import 'package:portfolio/src/features/experience/presentation/experience_section.dart';
 import 'package:portfolio/src/features/personal_info/presentation/personal_info_section.dart';
 import 'package:portfolio/src/features/main/presentation/widgets/app_bar.dart';
@@ -84,14 +85,18 @@ class MainDesktop extends ConsumerWidget {
                                       ),
                                     ),
                                     gapH120,
+                                    EducationSection(
+                                      key: ref
+                                          .watch(educationSectionKeyProvider),
+                                    ),
+                                    gapH120,
                                     ExperienceSection(
-                                      key: ref.watch(
-                                          experienceSectionKeyProvider),
+                                      key: ref
+                                          .watch(experienceSectionKeyProvider),
                                     ),
                                     gapH120,
                                     ProjectSection(
-                                      key: ref
-                                          .watch(projectSectionKeyProvider),
+                                      key: ref.watch(projectSectionKeyProvider),
                                     ),
                                   ],
                                 ),

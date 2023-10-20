@@ -7,7 +7,7 @@ import 'package:portfolio/src/common/data/language_repository.dart';
 import 'package:portfolio/src/common/widgets/animated_fade_slide.dart';
 import 'package:portfolio/src/common/widgets/selection_area.dart';
 import 'package:portfolio/src/constants/sizes.dart';
-import 'package:portfolio/src/constants/tab_bar.dart';
+import 'package:portfolio/src/constants/my_tabs.dart';
 import 'package:portfolio/src/features/main/presentation/widgets/app_bar_button.dart';
 import 'package:portfolio/src/features/main/presentation/widgets/dark_mode_switch.dart';
 import 'package:portfolio/src/features/main/presentation/widgets/locale_button.dart';
@@ -82,6 +82,13 @@ class MyAppBar extends ConsumerWidget {
                     title: tr(LocaleKeys.aboutSectionTitle),
                     onPressed: () {
                       _onAppBarButtonTap(ref.watch(aboutSectionKeyProvider));
+                    },
+                  ),
+                  AppBarButton(
+                    title: tr(LocaleKeys.educationSectionTitle),
+                    onPressed: () {
+                      _onAppBarButtonTap(
+                          ref.watch(educationSectionKeyProvider));
                     },
                   ),
                   AppBarButton(

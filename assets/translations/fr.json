@@ -152,6 +152,29 @@
             ]
         }
     ],
+    "educations": [
+        {
+            "title": "Master Informatique E-Services",
+            "school": "Université de Lille",
+            "description": "Ergonomie et conception graphique, génie logiciel, gestion de projets, langues et technologies de l'infrastructure frontend et backend pour le Web ou les applications",
+            "startYear": 2020,
+            "endYear": 2022
+        },
+        {
+            "title": "Licence Informatique",
+            "school": "Université de Lille",
+            "description": "Programmation des systèmes, définition des automates, complexité des bases de données relationnelles, conception orientée objet",
+            "startYear": 2017,
+            "endYear": 2020
+        },
+        {
+            "title": "Baccalauréat Scientifique",
+            "school": "Lycée Jehanne D'arc Tourcoing",
+            "description": "Mathématiques, Sciences Physiques, Chimie, Informatique Sciences du Numérique",
+            "startYear": 2014,
+            "endYear": 2014
+        }
+    ],
     "languages": [
         {
             "code": "en",
@@ -175,8 +198,10 @@
     "aboutSectionTitleAlt": "À propos de moi",
     "experienceSectionTitle": "Expériences",
     "projectsSectionTitle": "Projets",
+    "educationSectionTitle": "Formation",
     "resume": "CV",
     "downloadResume": "Télécharger le CV",
     "openUrlError": "Impossible d'ouvrir l'url",
+    "scrollToTop": "Revenir en haut de la page",
     "unknownLanguageError": "Langue inconnue"
 }

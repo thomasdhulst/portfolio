@@ -9,13 +9,13 @@ import 'package:google_fonts/google_fonts.dart';
 
 final lightTheme = FlexThemeData.light(
   colors: const FlexSchemeColor(
-    primary: Color(0xffbfd7ed),
-    primaryContainer: Color(0xff0074b7),
-    secondary: Color(0xff60a3d9),
-    secondaryContainer: Color(0xff003b73),
-    tertiary: Color(0xff8a9cbb),
-    tertiaryContainer: Color(0xff000000),
-    appBarColor: Color(0xff003b73),
+    primary: Color.fromARGB(255, 195, 237, 191),
+    primaryContainer: Color.fromARGB(255, 0, 183, 24),
+    secondary: Color.fromARGB(255, 96, 217, 106),
+    secondaryContainer: Color.fromARGB(255, 0, 115, 6),
+    tertiary: Color.fromARGB(255, 138, 187, 146),
+    tertiaryContainer: Color.fromARGB(255, 0, 0, 0),
+    appBarColor: Color.fromARGB(255, 0, 115, 29),
     error: Color(0xffb00020),
   ),
   textTheme: const TextTheme(

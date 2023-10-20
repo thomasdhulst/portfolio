@@ -22,3 +22,8 @@ GlobalKey experienceSectionKey(ExperienceSectionKeyRef ref) {
 GlobalKey projectSectionKey(ProjectSectionKeyRef ref) {
   return GlobalKey();
 }
+
+@riverpod
+GlobalKey educationSectionKey(EducationSectionKeyRef ref) {
+  return GlobalKey();
+}
