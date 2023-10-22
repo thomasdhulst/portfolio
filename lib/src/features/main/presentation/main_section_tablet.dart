@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:portfolio/src/common/widgets/animated_fade_slide.dart';
 import 'package:portfolio/src/common/widgets/selection_area.dart';
-import 'package:portfolio/src/constants/sizes.dart';
 import 'package:portfolio/src/features/about/presentation/about_section.dart';
 import 'package:portfolio/src/features/education/presentation/education_section.dart';
 import 'package:portfolio/src/features/experience/presentation/experience_section.dart';
@@ -25,77 +23,90 @@ class _MainTabletState extends ConsumerState<MainTablet> {
   Widget build(BuildContext context) {
     final scrollController = ref.watch(scrollControllerProvider);
 
-    return Column(
-      children: [
-        Expanded(
-          child: MySelectionArea(
-            child: Container(
-              color: Theme.of(context).colorScheme.primary,
-              child: CustomScrollView(
-                controller: scrollController,
-                slivers: [
-                  const MySliverAppBar(),
-                  SliverPadding(
-                    padding: _buildResponsivePadding(),
-                    sliver: SliverFillRemaining(
-                      hasScrollBody: true,
-                      child: Align(
-                        alignment: Alignment.topLeft,
-                        child: AnimatedFadeSlide(
-                          offset: const Offset(-128, 0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.stretch,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 12,
-                                ),
-                                child: PersonalInfoSection(
-                                  key: ref.watch(homeSectionKeyProvider),
-                                ),
-                              ),
-                              gapH24,
-                              Expanded(
-                                // height: 1500,
-                                child: TabBarView(
-                                  children: [
-                                    AboutSection(
-                                      key: ref.watch(aboutSectionKeyProvider),
-                                    ),
-                                    EducationSection(
-                                      key: ref
-                                          .watch(educationSectionKeyProvider),
-                                    ),
-                                    ExperienceSection(
-                                      key: ref
-                                          .watch(experienceSectionKeyProvider),
-                                    ),
-                                    ProjectSection(
-                                      key: ref.watch(projectSectionKeyProvider),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
+    return MySelectionArea(
+      child: Container(
+        color: Theme.of(context).colorScheme.primary,
+        child: NestedScrollView(
+          controller: scrollController,
+          headerSliverBuilder:
+              (BuildContext context, bool innerBoxIsScrolled) => [
+            const MySliverAppBar(),
+            SliverPadding(
+              padding: _buildResponsivePadding(),
+              sliver: SliverToBoxAdapter(
+                child: PersonalInfoSection(
+                  key: ref.watch(homeSectionKeyProvider),
+                ),
               ),
+            )
+          ],
+          body: Padding(
+            padding: const EdgeInsets.only(bottom: 12, right: 24, left: 24),
+            child: TabBarView(
+              children: [
+                AboutSection(
+                  key: ref.watch(aboutSectionKeyProvider),
+                ),
+                EducationSection(
+                  key: ref.watch(educationSectionKeyProvider),
+                ),
+                ExperienceSection(
+                  key: ref.watch(experienceSectionKeyProvider),
+                ),
+                ProjectSection(
+                  key: ref.watch(projectSectionKeyProvider),
+                ),
+              ],
             ),
           ),
+
+          // Padding(
+          //   padding: _buildResponsivePadding(),
+          //   child: CustomScrollView(
+          //     slivers: [
+          //       SliverList(
+          //         delegate: SliverChildListDelegate([
+          //           Padding(
+          //             padding: const EdgeInsets.symmetric(horizontal: 12),
+          //             child: PersonalInfoSection(
+          //               key: ref.watch(homeSectionKeyProvider),
+          //             ),
+          //           ),
+          //           gapH24,
+          //           Expanded(
+          //             // height: 3500,
+          //             child: TabBarView(
+          //               children: [
+          //                 AboutSection(
+          //                   key: ref.watch(aboutSectionKeyProvider),
+          //                 ),
+          //                 EducationSection(
+          //                   key: ref.watch(educationSectionKeyProvider),
+          //                 ),
+          //                 ExperienceSection(
+          //                   key: ref.watch(experienceSectionKeyProvider),
+          //                 ),
+          //                 ProjectSection(
+          //                   key: ref.watch(projectSectionKeyProvider),
+          //                 ),
+          //               ],
+          //             ),
+          //           ),
+          //         ]),
+          //       ),
+          //     ],
+          //   ),
+          // ),
         ),
-      ],
+      ),
     );
   }
 
   EdgeInsetsGeometry _buildResponsivePadding() {
     if (Responsive.isTablet(context)) {
-      return const EdgeInsets.fromLTRB(48, 60, 48, 88);
+      return const EdgeInsets.fromLTRB(48, 60, 48, 0);
     } else if (Responsive.isMobile(context)) {
-      return const EdgeInsets.fromLTRB(20, 32, 20, 88);
+      return const EdgeInsets.fromLTRB(20, 32, 20, 0);
     }
     return EdgeInsets.zero;
   }
