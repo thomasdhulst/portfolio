@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:portfolio/src/common/widgets/fast_image_asset.dart';
 import 'package:portfolio/src/common/widgets/responsive.dart';
 import 'package:portfolio/src/constants/sizes.dart';
 import 'package:portfolio/src/features/personal_info/data/personal_info_repository.dart';
@@ -27,8 +28,8 @@ class PersonalInfoMobile extends ConsumerWidget {
               padding: const EdgeInsets.symmetric(vertical: 8.0),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(16.0),
-                child: Image.asset(
-                  'assets/images/pdp.jpg',
+                child: const FastImageAsset(
+                  path: 'assets/images/pdp.jpg',
                   height: 120.0,
                   width: 120.0,
                 ),
